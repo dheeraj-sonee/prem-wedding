@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cinzel-dec: 'Cinzel Decorative', cursive, serif;
+  --font-marcellus: 'Marcellus', serif;
+  --font-devanagari: 'Noto Serif Devanagari', 'Rozha One', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom Wedding Royal Theme Backgrounds & Borders */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fcebc2 0%, #e8b958 35%, #bf8a28 65%, #faedd8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #f5d485, #b8860b, #eac269, #996515) 1;
+}
+
+.gold-box-shadow {
+  box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.25), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(232, 185, 88, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #140407;
+}
+::-webkit-scrollbar-thumb {
+  background: #5c1822;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #992839;
+}
